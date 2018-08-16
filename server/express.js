@@ -37,11 +37,12 @@ app.use(cookieParser())
 app.use(compress())
 
 //allow axios to work
-app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
- });
+// app.use(function(req, res, next) {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//   next();
+//  });
+
 // secure apps by setting various HTTP headers
 app.use(helmet())
 // enable CORS - Cross Origin Resource Sharing
